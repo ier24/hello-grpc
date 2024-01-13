@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es6",                         // コンパイルされるJavaScriptのバージョン
+    "module": "commonjs",                    // 使用するモジュールシステム
+    "outDir": "./dist",                      // コンパイルされたファイルの出力ディレクトリ
+    "strict": true,                          // 厳格な型チェックの有効化
+    "esModuleInterop": true,                 // CommonJSモジュールのインポートを許可
+    "skipLibCheck": true,                    // 定義ファイルの型チェックをスキップ
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字を一貫性を持たせる
+  },
+  "include": ["./**/*.ts"],                  // コンパイルするTypeScriptファイル
+  "exclude": ["node_modules"]                // コンパイルから除外するディレクトリ
+}
