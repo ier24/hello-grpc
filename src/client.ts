@@ -24,13 +24,6 @@ const chatClient = new ChatService(
   grpc.credentials.createInsecure()
 );
 
-const chat = chatClient.chat();
-
-// チャットを終了する
-setTimeout(() => {
-  chat.end();
-}, 115000);
-
 client.sayHello({ name: "Takashi!" }, (error: any, response: any) => {
   if (!error) {
     console.log("Greeting:", response.message);
@@ -39,6 +32,7 @@ client.sayHello({ name: "Takashi!" }, (error: any, response: any) => {
   }
 });
 
+const chat = chatClient.chat();
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
